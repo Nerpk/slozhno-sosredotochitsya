@@ -3,6 +3,7 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   background-color: var(--bg-color);
+  background-attachment: fixed;
 }
 
 /* ||           || */
@@ -14,13 +15,15 @@
   background-position: center;
 }
 
-.header, .footer {
+.header,
+.footer {
   display: grid;
   grid-template-rows: 25px repeat(3, 1fr) 25px;
   padding: min(calc(10 * (100vw + 18px) / 393), 20px);
 }
 
-.header::after, .footer::after {
+.header::after,
+.footer::after {
   content: "";
   width: 25px;
   height: 25px;
@@ -28,7 +31,8 @@
   border-left: 1px solid var(--button-and-rectangle-color);
 }
 
-.header::before, .footer::before {
+.header::before,
+.footer::before {
   content: "";
   margin-inline-start: calc(100% - 25px);
   width: 25px;
@@ -114,7 +118,7 @@
   line-height: 82.5%; /* 95.7px */
 }
 
-.title-text{
+.title-text {
   background-color: var(--accent-color);
   color: var(--title-paragraph-color);
   font-family: IBM Plex Mono;
@@ -180,8 +184,9 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: clamp(50px, calc(10 * (100vw + 280px) / 131), 80px); 
-  padding: min(calc(20 * (100vw + 411px) / 393), 60px) min(calc(10 * (100vw + 18px) / 393), 20px);
+  gap: clamp(50px, calc(10 * (100vw + 280px) / 131), 80px);
+  padding: min(calc(20 * (100vw + 411px) / 393), 60px)
+    min(calc(10 * (100vw + 18px) / 393), 20px);
 }
 
 .main__list-item {
@@ -198,9 +203,9 @@
 
 .main__list-item__title-rules {
   list-style: none;
- }
+}
 
- .main__list-rules {
+.main__list-rules {
   list-style-type: decimal;
   padding: 0;
   margin: 0;
@@ -209,21 +214,22 @@
 /* ||            || */
 /* \/медиазапросы\/ */
 @media (width < 768px) {
-  .header, .footer {
+  .header,
+  .footer {
     min-block-size: 662px;
   }
 
   .header::after {
     margin-block-start: 6px;
-  } 
-  
+  }
+
   .header__theme-menu-list {
     padding: 42px 0;
   }
 
   .title {
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  padding-block-start: 7px;
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    padding-block-start: 7px;
   }
 
   .title-text {
@@ -243,7 +249,7 @@
   .main__image {
     width: 100%;
   }
-  
+
   .main__section-image {
     display: flex;
     flex-direction: column;
@@ -252,7 +258,8 @@
 }
 
 @media (width >= 768px) and (width < 1024px) {
-  .header, .footer {
+  .header,
+  .footer {
     max-block-size: 1024px;
   }
 
@@ -288,7 +295,7 @@
     /* grid-template-columns: repeat(3, calc((100vw-80px)/3));  */
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 23px auto 1fr auto;
-    grid-template-areas: 
+    grid-template-areas:
       "title title title"
       "sunset sunset ice-cream"
       "tape books ice-cream"
@@ -305,7 +312,7 @@
 
   .main__section-image-title {
     grid-area: title;
-  } 
+  }
 
   .sunset {
     grid-area: sunset;
@@ -334,9 +341,10 @@
 }
 
 @media (width >= 1024px) {
-  .header, footer {
+  .header,
+  footer {
     max-block-size: 768px;
-    grid-template-rows: 0px 25px repeat(2, 1fr ) 0px;
+    grid-template-rows: 0px 25px repeat(2, 1fr) 0px;
   }
 
   .header__theme-menu-list {
@@ -348,13 +356,13 @@
 
   .header::after {
     margin-block-start: -25px;
-  } 
+  }
 
   .title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     margin-inline-start: -20px;
     padding-block-start: 275px;
-  }  
+  }
 
   .title-text {
     inline-size: 491px;
@@ -364,7 +372,7 @@
   }
 
   .content {
-    padding: 60px 20px; 
+    padding: 60px 20px;
   }
 
   .main__section {
@@ -385,14 +393,14 @@
   }
 
   .main__section-vertical .main__list-paragrath {
-    margin-inline-start: -6px; 
+    margin-inline-start: -6px;
   }
 
   .main__section-image {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 23px auto 1fr auto;
-    grid-template-areas: 
+    grid-template-areas:
       "title title title"
       "sunset sunset ice-cream"
       "tape books ice-cream"
@@ -409,7 +417,7 @@
 
   .main__section-image-title {
     grid-area: title;
-  } 
+  }
 
   .sunset {
     grid-area: sunset;
