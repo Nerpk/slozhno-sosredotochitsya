@@ -1,3 +1,15 @@
+:root {
+  --accent-color: #ff0070;
+  --bg-color: #000028;
+  --text-color: #f1b2ce;
+  --title-text-color: #d800ff;
+  --outline-color: rgba(255, 0, 112, 0.40);
+  --shadow-color: #ff0070;
+  --button-and-rectangle-color: #ff0070;
+  --title-paragraph-color: #000028;
+
+}
+
 /*
   Переменные для вашего проекта
   и их переопределение под различные устройства
