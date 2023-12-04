@@ -20,34 +20,30 @@
   min-block-size: 100vh;
 }
 
-.decorated-zone::after,
-.decorated-zone::before {
+.rectangle {
+  grid-row: 4/5;
+  position: relative;
+  top: calc(0px - 100vh + 2*min(calc(10 * (100vw + 18px) / 393), 20px));
+}
+
+.rectangle::after, .rectangle::before {
   content: "";
+  position: absolute;
   width: 25px;
   height: 25px;
 }
 
-.decorated-zone::after {
-  border-bottom: 1px solid var(--button-and-rectangle-color);
-  border-left: 1px solid var(--button-and-rectangle-color);
-}
-
-.decorated-zone::before {
+.rectangle::after {
   border-top: 1px solid var(--button-and-rectangle-color);
   border-right: 1px solid var(--button-and-rectangle-color);
+  left: calc(100vw - 2*min(calc(10 * (100vw + 18px) / 393), 20px) - 25px);
 }
 
-.header::after {
-  position: absolute;
-  top: calc(100vh - 45px);
-  left: min(calc(10 * (100vw + 18px) / 393), 20px);
-}
-
-.header::before {
-  position: absolute;
-  top: min(calc(10 * (100vw + 18px) / 393), 20px);
-  right: min(calc(10 * (100vw + 18px) / 393), 20px);
-}
+.rectangle::before {
+  border-bottom: 1px solid var(--button-and-rectangle-color);
+  border-left: 1px solid var(--button-and-rectangle-color);
+  top: calc(100vh - 2*min(calc(10 * (100vw + 18px) / 393), 20px) - 25px);
+} 
 
 .rec::before {
   content: var(--rec-text);
@@ -84,6 +80,10 @@
   box-shadow: 0 0 4px 2px var(--rec-color);
 }
 
+.header__theme-menu {
+  grid-row: 1/2;
+}
+
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
@@ -114,6 +114,7 @@
 
 .header__theme-menu-button:hover {
   outline: solid 1px var(--outline-color);
+  cursor: pointer;
 }
 
 .header__theme-menu-button_active {
@@ -147,6 +148,7 @@
   line-height: 23.4px; /* 130% */
   justify-self: right;
   max-inline-size: 364px;
+  grid-row: 3/4;
 }
 
 /* ||                     || */
@@ -292,10 +294,6 @@
 /* ||            || */
 /* \/медиазапросы\/ */
 @media (width < 768px) {
-  .header::after {
-    margin-block-start: 10px;
-  }
-
   .title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     margin-inline-start: 0;
@@ -334,8 +332,8 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .main__section-vertical .main__list-paragrath {
-    margin-inline-start: -6px;
+  .main__section-vertical {
+    gap: 10px;
   }
 }
 
@@ -344,14 +342,4 @@
 
 .footer__title {
   justify-self: center;
-}
-
-.footer::after {
-  justify-self: start;
-  align-self: end;
-}
-
-.footer::before {
-  justify-self: end;
-  align-self: start;
 }
