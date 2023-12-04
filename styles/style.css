@@ -14,13 +14,14 @@
 /* \/стили шапки\/ */
 .decorated-zone {
   display: grid;
-  grid-template-rows:  1fr min-content 1fr ;
+  grid-template-rows: 1fr min-content 1fr;
   align-items: center;
   padding: min(calc(10 * (100vw + 18px) / 393), 20px);
   min-block-size: 100vh;
 }
 
-.decorated-zone::after, .decorated-zone::before {
+.decorated-zone::after,
+.decorated-zone::before {
   content: "";
   width: 25px;
   height: 25px;
@@ -45,7 +46,7 @@
 .header::before {
   position: absolute;
   top: min(calc(10 * (100vw + 18px) / 393), 20px);
-  right:min(calc(10 * (100vw + 18px) / 393), 20px);
+  right: min(calc(10 * (100vw + 18px) / 393), 20px);
 }
 
 .rec::before {
@@ -151,7 +152,10 @@
 /* ||                     || */
 /* \/стили основной секции\/ */
 /* \/ стили текста \/ */
-.main__section-title, .main__paragrath-title, .main__list-title, .main__paragrath-text {
+.main__section-title,
+.main__paragrath-title,
+.main__list-title,
+.main__paragrath-text {
   font-family: IBM Plex Mono, monospace;
   font-size: 18px;
   font-style: normal;
@@ -241,48 +245,48 @@
 /* /\ стили разметки /\ */
 
 /* \/ галерея \/ */
-  .main__section-image {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: min-content auto 1fr auto;
-    grid-template-areas:
-      "title title title"
-      "sunset sunset ice-cream"
-      "tape books ice-cream"
-      "tape street street";
-    gap: 20px;
-  }
+.main__section-image {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: min-content auto 1fr auto;
+  grid-template-areas:
+    "title title title"
+    "sunset sunset ice-cream"
+    "tape books ice-cream"
+    "tape street street";
+  gap: 20px;
+}
 
-  .main__image {
-    object-fit: cover;
-    object-position: center;
-    inline-size: 100%;
-    block-size: 100%;
-  }
+.main__image {
+  object-fit: cover;
+  object-position: center;
+  inline-size: 100%;
+  block-size: 100%;
+}
 
-  .main__section-image-title {
-    grid-area: title;
-  }
+.main__section-image-title {
+  grid-area: title;
+}
 
-  .sunset {
-    grid-area: sunset;
-  }
+.sunset {
+  grid-area: sunset;
+}
 
-  .ice-cream {
-    grid-area: ice-cream;
-  }
+.ice-cream {
+  grid-area: ice-cream;
+}
 
-  .tape {
-    grid-area: tape;
-  }
+.tape {
+  grid-area: tape;
+}
 
-  .books {
-    grid-area: books;
-  }
+.books {
+  grid-area: books;
+}
 
-  .street {
-    grid-area: street;
-  }
+.street {
+  grid-area: street;
+}
 /* /\ галерея /\ */
 
 /* ||            || */
@@ -308,6 +312,7 @@
   }
 }
 /* @media (width >= 768px) and (width < 1024px) {} */
+
 @media (width >= 1024px) {
   .header {
     align-items: start;
@@ -322,7 +327,6 @@
   .title-text {
     max-inline-size: 491px;
     align-self: center;
-
   }
 
   .main__section-horizontal-list {
