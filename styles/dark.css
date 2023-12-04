@@ -17,12 +17,8 @@
   --shadow-color: #ff0070;
   --button-and-rectangle-color: #ff0070;
   --title-paragraph-color: #000028;
-
-  .header {
-    background-image: url(../images/cover-image-dark.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+  --link-bg-image: url(../images/cover-image-dark.png);
+  --rec-color: #ff0070;
+  --rec-text: "rec";
 }
 

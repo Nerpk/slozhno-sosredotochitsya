@@ -7,7 +7,9 @@
   --shadow-color: #ff0070;
   --button-and-rectangle-color: #ff0070;
   --title-paragraph-color: #000028;
-
+  --link-bg-image: url(../images/cover-image-dark.png);
+  --rec-color: #ff0070;
+  --rec-text: "rec";
 }
 
 /*

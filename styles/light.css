@@ -14,13 +14,9 @@
     --shadow-color: #ff0070;
     --button-and-rectangle-color: #353430;
     --title-paragraph-color: #353430;
-  }
-
-  .header {
-    background-image: url(../images/cover-image-light.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    --link-bg-image: url(../images/cover-image-light.png);
+    --rec-color: #fff1f7;
+    --rec-text: "";
   }
 }
 
@@ -37,20 +33,18 @@
   --shadow-color: #ff0070;
   --button-and-rectangle-color: #353430;
   --title-paragraph-color: #353430;
-
-  .header {
-    background-image: url(../images/cover-image-light.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+  --link-bg-image: url(../images/cover-image-light.png);
+  --rec-color: #fff1f7;
+  --rec-text: "";
 
   .rec::before {
     content: "";
+    color: inherit;
   }
 
   .rec::after {
     content: "";
     background-color: inherit;
+    box-shadow: inherit;
   }
 }
