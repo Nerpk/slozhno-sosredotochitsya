@@ -13,6 +13,7 @@
 /* ||           || */
 /* \/стили шапки\/ */
 .decorated-zone {
+  position: relative;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   align-items: center;
@@ -20,30 +21,26 @@
   min-block-size: 100vh;
 }
 
-.rectangle {
-  grid-row: 4/5;
-  position: relative;
-  top: calc(0px - 100vh + 2*min(calc(10 * (100vw + 18px) / 393), 20px));
-}
-
-.rectangle::after, .rectangle::before {
+.decorated-zone::after, .decorated-zone::before {
   content: "";
   position: absolute;
-  width: 25px;
-  height: 25px;
+  block-size: 25px;
+  inline-size: 25px;
 }
 
-.rectangle::after {
-  border-top: 1px solid var(--button-and-rectangle-color);
-  border-right: 1px solid var(--button-and-rectangle-color);
-  left: calc(100vw - 2*min(calc(10 * (100vw + 18px) / 393), 20px) - 25px);
+.decorated-zone::before {
+  top: min(calc(10 * (100vw + 18px) / 393), 20px);
+  right: min(calc(10 * (100vw + 18px) / 393), 20px);
+  border-inline-end: 1px solid var(--button-and-rectangle-color);
+  border-block-start: 1px solid var(--button-and-rectangle-color);
 }
 
-.rectangle::before {
-  border-bottom: 1px solid var(--button-and-rectangle-color);
-  border-left: 1px solid var(--button-and-rectangle-color);
-  top: calc(100vh - 2*min(calc(10 * (100vw + 18px) / 393), 20px) - 25px);
-} 
+.decorated-zone::after {
+  bottom: min(calc(10 * (100vw + 18px) / 393), 20px);
+  left: min(calc(10 * (100vw + 18px) / 393), 20px);
+  border-inline-start: 1px solid var(--button-and-rectangle-color);
+  border-block-end: 1px solid var(--button-and-rectangle-color);
+}
 
 .rec::before {
   content: var(--rec-text);
@@ -63,7 +60,7 @@
   content: "";
   position: absolute;
   top: min(calc(10 * (100vw + 18px) / 393), 20px);
-  right: min(calc((10 * (100vw + 1118px) / 393)), 48px);
+  right: clamp(10px, calc((10 * (100vw + 1118px) / 393)), 48px);
 }
 
 .rec::after {
